@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+
+group 'com.devcaz'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.projectlombok', name: 'lombok', version: '1.18.14'
+    testImplementation group: 'io.rest-assured', name: 'rest-assured', version: '4.3.3'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.1'
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.1'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.14'
+    testImplementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.12.3'
+    testImplementation group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.12.3'
+    testRuntimeOnly group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.7.1'
+    testAnnotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.14'
+    testImplementation group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
+    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.3'
+    testImplementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.0.0-alpha-7'
+    testImplementation("io.cucumber:cucumber-junit-platform-engine:latest.release")
+}
+
+test {
+    useJUnitPlatform()
+}
